@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toolbartoggle()" fxHide.gt-xs>
+    <mat-icon fontIcon="menu">menu</mat-icon>
+  </button>
+
+  <div>لوگو</div>
+  <ul fxFlex fxLayout fxLayoutAlign="flex-end" fxLayoutGap="15px" fxHide.xs>
+    <li>
+      <a routerLink="/"> خانه </a>
+    </li>
+    <li *ngIf="!isAuth"><a routerLink="/signup">ثبت نام</a></li>
+    <li *ngIf="!isAuth"><a routerLink="/login">ورود </a></li>
+    <li *ngIf="isAuth"><a routerLink="/training">تمرین </a></li>
+    <li *ngIf="isAuth" (click)="onLogout()"><a>خروج </a></li>
+  </ul>
+  <div></div>
+</mat-toolbar>

@@ -1,0 +1,12 @@
+<section fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="20px">
+  <mat-progress-spinner
+    class="example-margin"
+    color="primary"
+    mode="determinate"
+    [value]="progress"
+  >
+  </mat-progress-spinner>
+  <h1>{{ progress }}٪ پیشرفت</h1>
+  <p>ادامه بده تو میتونی</p>
+  <button mat-raised-button color="accent" (click)="stop()">توقف</button>
+</section>

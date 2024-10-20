@@ -1,0 +1,10 @@
+.main {
+  text-align: center;
+  padding: 40px;
+}
+.train {
+  color: brown;
+}
+.train:hover {
+  color: cadetblue;
+}

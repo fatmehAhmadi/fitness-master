@@ -1,0 +1,33 @@
+<mat-list role="list">
+  <mat-list-item role="listitem" routerLink="/" (click)="sidenavbartoggle()"
+    >خانه
+  </mat-list-item>
+  <mat-list-item
+    role="listitem"
+    routerLink="/signup"
+    (click)="sidenavbartoggle()"
+    *ngIf="!isAuth"
+    >ثبت نام</mat-list-item
+  >
+  <mat-list-item
+    role="listitem"
+    routerLink="/login"
+    (click)="sidenavbartoggle()"
+    *ngIf="!isAuth"
+    >ورود
+  </mat-list-item>
+  <mat-list-item
+    role="listitem"
+    routerLink="/training"
+    (click)="sidenavbartoggle()"
+    *ngIf="isAuth"
+    >تمرین
+  </mat-list-item>
+  <mat-list-item
+    role="listitem"
+    routerLink=""
+    *ngIf="isAuth"
+    (click)="onLogout()"
+    >خروج
+  </mat-list-item>
+</mat-list>
